@@ -55,13 +55,13 @@ img {
   color: #8f8f8f; }
 
 .colour-1 {
-  color: #cc9944; }
+  color: #c94; }
 
 .colour-2 {
   color: #925; }
 
 .colour-3 {
-  color: #448844; }
+  color: #484; }
 
 .text-big {
   font-size: 24px;
@@ -88,17 +88,22 @@ footer {
   footer * {
     color: #797979; }
 
+#wrapper {
+  margin: 0 auto;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #eee; }
+
 #container {
   *zoom: 1;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  max-width: 600px;
-  background: #fff;
   margin: 40px auto 20px;
-  border-radius: 7px;
-  border: 1px solid #eee;
+  border-top: 1px solid #eee;
   position: relative; }
   #container:before, #container:after {
     content: " ";

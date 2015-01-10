@@ -9,11 +9,13 @@ links:
     url: /
   - name: About
     url: /about
-  - name: Email
-    url: mailto:jordon@jordonsmith.uk
-    external: true
+  - name: Contact
+    url: /contact
   - name: GitHub
     url: https://github.com/jrdnull
+    external: true
+  - name: Twitter
+    url: https://twitter.com/jrdnull
     external: true
 highlighter: pygments
 permalink: pretty

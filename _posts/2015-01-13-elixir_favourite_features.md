@@ -42,12 +42,10 @@ iex(2)>  1..15 |> Enum.map(&(FizzBuzz.get(&1)))
  "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"]
 {% endhighlight %}
 
-The do is executed for the first clause that is matched, if no clauses are
-matched an error will be raised. I think this is a very readable solution.
+The do is executed for the first clause that is matched. If no clauses are
+matched, an error will be raised. I think this is a very readable solution.
 For example I would read the 2nd clause as "get, when n is evenly divisible by 3,
 is Fizz".
-
----
 
 ### Pattern Matching
 
@@ -66,11 +64,9 @@ This function is the private implementation (defp rather than def) for the encod
 function. Having a private implementation like this allows for a nicer public
 interface by excluding the accumulator from the function arguments.
 
-Here the _encode function has multiple clasues matching on the value of the
-arguments with the base cases first. Instead of multiple return points there
+Here the _encode function has multiple clauses matching on the value of the
+arguments, with the base cases first. Instead of multiple return points there
 are three conscise functions dealing with the different conditions of a call.
-
----
 
 ### The Pipe Operator
 

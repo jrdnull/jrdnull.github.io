@@ -19,28 +19,29 @@ you're interested in a more in-depth introduction I have read and can recommend
 I'll show you a couple of my favourite features with some code examples.
 
 ---
+
 ### Guard Clauses
 
 Here is an example implementation of [FizzBuzz](http://c2.com/cgi/wiki?FizzBuzzTest)
 using guard clauses:
 
-{% highlight elixir %}
+```elixir
 defmodule FizzBuzz do
   def get(n) when rem(n, 15) == 0, do: "FizzBuzz"
   def get(n) when rem(n, 3) == 0, do: "Fizz"
   def get(n) when rem(n, 5) == 0, do: "Buzz"
   def get(n), do: to_string(n)
 end
-{% endhighlight %}
+```
 
 Trying it out with [IEx](http://elixir-lang.org/docs/master/iex/IEx.html) (Elixir's
 REPL):
 
-{% highlight iex %}
+```elixir
 iex(2)>  1..15 |> Enum.map(&(FizzBuzz.get(&1)))
 ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8",
  "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"]
-{% endhighlight %}
+```
 
 The do is executed for the first clause that is matched. If no clauses are
 matched, an error will be raised. I think this is a very readable solution.
@@ -52,13 +53,13 @@ is Fizz".
 Here is the _encode function from [base58](https://github.com/jrdnull/base58)
 a module I wrote to deal with Base58 encoding:
 
-{% highlight elixir %}
+```elixir
 defp _encode(0, []), do: [@alphabet |> hd] |> to_string
 defp _encode(0, acc), do: acc |> to_string
 defp _encode(x, acc) do
   _encode(div(x, 58), [Enum.at(@alphabet, rem(x, 58)) | acc])
 end
-{% endhighlight %}
+```
 
 This function is the private implementation (defp rather than def) for the encode
 function. Having a private implementation like this allows for a nicer public
@@ -77,17 +78,17 @@ function call on the right.
 
 Here is some example code written without the pipe operator:
 
-{% highlight iex %}
+```elixir
 iex(1)> String.downcase(String.strip(" Hello ELIXIR  "))
 "hello elixir"
-{% endhighlight %}
+```
 
 Now with the pipe operator:
 
-{% highlight iex %}
+```elixir
 iex(2)> " Hello ELIXIR  " |> String.strip |> String.downcase
 "hello elixir"
-{% endhighlight %}
+```
 
 The second version can be read in a more natural way from left to right, rather
 than from the inside out.

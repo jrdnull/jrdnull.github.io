@@ -17,7 +17,7 @@ links:
   - name: Twitter
     url: https://twitter.com/jrdnull
     external: true
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
 markdown: kramdown
 redcarpet:

@@ -13,7 +13,7 @@ During a code review at work I came across a function that iterated
 over an array of objects, returning true if the predicate is true for an element,
 otherwise false. Below is a simplified example to illustrate this:
 
-{% highlight javascript %}
+```javascript
 function isLarge(x) { return x > 1000; }
 
 function containsLargeNumber(numbers) {
@@ -25,18 +25,18 @@ function containsLargeNumber(numbers) {
 
   return false;
 }
-{% endhighlight %}
+```
 
 I suggested that they could make use of the method
 [some()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 to improve the clarity of and shorten the code. Here is the above function
 rewritten to use some():
 
-{% highlight javascript %}
+```javascript
 function containsLargeNumber(numbers) {
   return numbers.some(isLarge);
 }
-{% endhighlight %}
+```
 
 I think that this version of containsLargeNumber() is much more concise.
 
@@ -55,20 +55,20 @@ higher order functions available on array.
 applies a given function to each element of the receiver and returns a
 new array with the results. For example we could double each element like this:
 
-{% highlight javascript %}
+```javascript
 > [ 1, 2, 3 ].map(function (x) { return x * 2; });
 = [ 2, 4, 6 ]
-{% endhighlight %}
+```
 
 ### Reduce
 [reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 reduces an array into a single value, we could calculate the sum of by returning
 the value of the accumulator plus the element:
 
-{% highlight javascript %}
+```javascript
 > [ 1, 2, 3 ].reduce(function (acc, x) { return acc + x; });
 = 6
-{% endhighlight %}
+```
 
 
 ### Filter
@@ -77,10 +77,10 @@ excludes from the returned array those elements for which the predicate is false
 Even numbers can be filtered out by testing that the remainder when divided by 2
 is not 0:
 
-{% highlight javascript %}
+```javascript
 > [ 1, 2, 3 ].filter(function (x) { return x % 2 !== 0 });
 = [ 1, 3 ]
-{% endhighlight %}
+```
 
 ---
 
@@ -91,4 +91,4 @@ Be sure to check the full documentation for the above methods on the
 [Mozilla Developer Network JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
 If you like the look of these methods, then you can also take a look at the
-[Lo-Dash](https://lodash.com/) library.
+[lodash](https://lodash.com/) library.

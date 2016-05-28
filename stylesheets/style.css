@@ -325,17 +325,19 @@ section.post, section > p {
       width: 7px !important;
       white-space: normal; }
   section.post li .highlight, section > p li .highlight {
-    padding: 0 10px; }
+    padding: 10px; }
   section.post li p, section > p li p {
     margin-bottom: 5px; }
 
 .highlight {
   margin: 0;
-  padding: 0; }
+  padding: 10px 60px; }
+
+div.highlighter-rouge { padding: 0; }
 
 pre {
   overflow-x: auto;
-  padding: 10px 0;
+  padding: 10px 60px;
   width: 100%;
   line-height: 1.2em;
   -webkit-box-sizing: border-box;

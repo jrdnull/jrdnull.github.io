@@ -11,7 +11,7 @@ and maintainable applications" on their homepage.
 
 Having recently stabilised at v1.0.0, with a great community, now is a great time
 to check out Elixir. An excellent introduction is available via the
-[Getting Started](http://elixir-lang.org/getting_started/1.html) guide, or if
+[Getting Started](http://elixir-lang.org/getting-started/introduction.html) guide, or if
 you're interested in a more in-depth introduction I have read and can recommend
 [Programming Elixir](https://pragprog.com/book/elixir/programming-elixir) by
 [David Thomas](http://pragdave.me).
@@ -71,7 +71,7 @@ are three conscise functions dealing with the different conditions of a call.
 ### The Pipe Operator
 
 My absolute favourite feature of Elixir at the moment is the
-[pipe operator](http://elixir-lang.org/getting_started/10.html#10.2.1-the-pipe-operator),
+[pipe operator](http://elixir-lang.org/getting-started/enumerables-and-streams.html#the-pipe-operator),
 which takes the value from the left and passes it to the first argument of the
 function call on the right.
 
